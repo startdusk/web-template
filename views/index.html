@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>code language survey</title>
+    <style type="text/css">
+        div {
+            text-align:center;
+            margin: auto;
+        }
+        th {
+            color: black;
+        }
+        td {
+            color: dodgerblue;
+        }
+        .odd td {
+            color: dodgerblue;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table border="2px" style="border-collapse:collapse">
+        <tr>
+            <th colspan="3">编程语言调查</th>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td>工作使用语言</td>
+            <td>业余使用语言</td>
+        </tr>
+        {{range $i, $v := .}}
+        <tr {{if isOdd $i}} class="odd" {{end}}>
+            <td>{{$v.Name}}</td>
+            <td>{{$v.Work}}</td>
+            <td>{{$v.Amateur}}</td>
+        </tr>
+        {{end}}
+    </table>
+</div>
+
+</body>
+</html>
