@@ -32,7 +32,7 @@ var items = []Profile{{
 	Amateur: "JavaScript",
 }}
 
-// isOdd 单数为false，双数为true
+// isOdd 单数为false，双数为true(做法是判断单双数来确定是否渲染列标签)
 func isOdd(num int) bool {
 	return (num % 2) == 0
 }
